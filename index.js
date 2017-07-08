@@ -17,8 +17,8 @@ app.use(compression());
 
 //app.use('/api', serverApp);
 app.use('/', clientApp);
-
-app.set('port', process.env.PORT || config.system.port || '3000');
+let port = process.env.PORT || config.system.port || '3000';
+app.set('port', port);
 
 server.listen(app.get('port'), function () {
     console.log(`Тестовое приложение запущено http://localhost:${app.get('port')}`);

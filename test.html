@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<button type="button" class="btn">проверка</button>
+<script>
+    $('.btn').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            "type": "POST",
+            "url": "/hernya",
+            "data": {
+                "foo": "bar"
+            }
+        }).done(function (d) {
+            console.log(d);
+        });
+    })
+</script>
+</body>
+</html>
