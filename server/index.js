@@ -1,15 +1,9 @@
 const express = require('express'),
     app = express(),
+    router = require('./router'),
     config = require('../config');
 
-app.get('/config', function (req, res, next) {
-    res.send({config: true});
-});
-
-app.post('/test', function (req, res, next) {
-
-    res.send({test: true});
-});
+app.use('/', router);
 
 app.use(function (req, res, next) {
     console.error("сработало 404");
@@ -19,10 +13,12 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
     console.error(err.message);
     console.error(err.stack);
-    err.userMessage = err.userMessage || 'На сервере произошла ошибка';
-    if (res.status() == 200)
-        res.status(500);
-    res.send({'server-error': true});
+    res.status(500);
+    res.send({
+        'server-error': true,
+        message: err.message,
+        stack: err.stack
+    });
 });
 
 module.exports = app;

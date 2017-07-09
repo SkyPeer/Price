@@ -3,13 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+
 <app-content>Loading.....)))))!!!!!</app-content>
 <script src="common.js"></script>
 <script src="libs.js"></script>
 <script src="angular.js"></script>
 <script src="app.js"></script>
+<div>
+    <label for="input1">description</label>
+    <input type="text" name="input1" >
+</div>
+<div>
+    <label for="input2">price</label>
+    <input type="text" name="input2" >
+</div>
+<div>
+    <label for="input3">count</label>
+    <input type="text" name="input3" >
+</div>
+
+
+<button type="button" class="btn">отправить</button>
+<script>
+    $('.btn').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            "type": "POST",
+            "url": "/api/insert",
+            "data": {
+                description: $('#input1').val(),
+                price: $('#input2').val(),
+                count: $('#input3').val()
+            }
+        }).done(function () {
+            $('#input1').val('');
+            $('#input2').val('');
+            $('#input3').val('');
+        });
+    })
+</script>
 </body>
 </html>

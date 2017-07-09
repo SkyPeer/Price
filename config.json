@@ -1,5 +1,6 @@
 {
   "system":{
-    "port":3001
+    "port":3001,
+    "base":"price"
   }
 }
