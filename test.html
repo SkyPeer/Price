@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,20 +6,29 @@
 
 </head>
 <body>
+
+<form name="myform">
+<input type="text" name="input1" value="input1">
+<input type="text" name="input2" value="input2">
 <button type="button" class="btn">проверка</button>
+</form>
 <script>
+    var form = document.forms.myform;
     $('.btn').click(function (e) {
         e.preventDefault();
         $.ajax({
             "type": "POST",
             "url": "/hernya",
             "data": {
-                "foo": "bar"
+                "Test": "HeLLLOOO!!!",
+                "input1": form.input1.value,
+                "input2": form.input2.value,
             }
         }).done(function (d) {
             console.log(d);
         });
     })
 </script>
+
 </body>
 </html>

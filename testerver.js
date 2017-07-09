@@ -10,6 +10,7 @@ appl.use(bodyParser.urlencoded({extended: false}));
 appl.post('/hernya', function (req, res) {
     let body = req.body;
     let query = req.query;
+    console.log(body);
     res.send(
         {query,body}
         //{query:query,body:body}
