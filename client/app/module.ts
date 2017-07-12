@@ -5,19 +5,27 @@ import {BrowserModule} from "@angular/platform-browser";
 //import {ControlsModule} from "./controls/module";
 //import {RoutingModule} from "./routes";
 import {FormsModule} from "@angular/forms";
-//import {CommunicateService} from "./services/communicate";
+import {ProductProvider} from "./providers/product";
+import {RouterModule, Routes} from "@angular/router";
+import {ProductsPage} from "./pages/products/products";
+import {HttpModule} from "@angular/http";
+
+const appRoutes: Routes = [
+    { path: '', component: ProductsPage }
+];
 
 @NgModule({
     declarations: [
-        DefaultLayout
+        DefaultLayout,
+        ProductsPage
     ],
     imports: [
-        BrowserModule,
-
+        BrowserModule,HttpModule,
+        RouterModule.forRoot(appRoutes)
         //PagesModule,
         //RoutingModule
     ],
-    //providers: [CommunicateService],
+    providers: [ProductProvider],
     bootstrap: [
         DefaultLayout
     ]
