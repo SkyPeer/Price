@@ -1,5 +1,12 @@
 webpackJsonp([1],{
 
+/***/ 100:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <h1>Products</h1>\r\n<table>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    <tr *ngFor=\"let product of products\">\r\n        <td>{{product.description}}</td>\r\n        <td>{{product.price}}</td>\r\n        <td>{{product.count}}</td>\r\n    </tr>\r\n</table>\r\n</div>";
+
+/***/ }),
+
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69,7 +76,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformB
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_product__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_products_products__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_products_products__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -133,7 +140,7 @@ var DefaultLayout = (function () {
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */]({
             selector: 'app-content',
             host: { 'class': 'sticky-content' },
-            template: "<h1>PriceApp</h1><router-outlet></router-outlet>"
+            template: __webpack_require__(96)
         })
     ], DefaultLayout);
     return DefaultLayout;
@@ -143,7 +150,14 @@ var DefaultLayout = (function () {
 
 /***/ }),
 
-/***/ 98:
+/***/ 96:
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Price App</h1><router-outlet></router-outlet>";
+
+/***/ }),
+
+/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -172,7 +186,7 @@ var ProductsPage = (function () {
     ProductsPage = __decorate([
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */]({
             selector: 'products-page',
-            template: __webpack_require__(99)
+            template: __webpack_require__(100)
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__providers_product__["a" /* ProductProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_product__["a" /* ProductProvider */]) === "function" && _a || Object])
     ], ProductsPage);
@@ -181,13 +195,6 @@ var ProductsPage = (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, exports) {
-
-module.exports = "<div>\r\n    <h1>Products</h1>\r\n<table>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    <tr *ngFor=\"let product of products\">\r\n        <td>{{product.description}}</td>\r\n        <td>{{product.price}}</td>\r\n        <td>{{product.count}}</td>\r\n    </tr>\r\n</table>\r\n</div>";
 
 /***/ })
 

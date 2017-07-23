@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 367:
+/***/ 368:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21,5 +21,5 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ })
 
-},[367]);
+},[368]);
 //# sourceMappingURL=angular.js.map
