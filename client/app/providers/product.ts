@@ -17,3 +17,4 @@ export class ProductProvider
         return body as Product[] || { };
     }
 }
+

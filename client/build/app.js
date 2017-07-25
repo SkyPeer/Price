@@ -153,7 +153,7 @@ var DefaultLayout = (function () {
 /***/ 96:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Price App</h1><router-outlet></router-outlet>";
+module.exports = "<h1>Price App</h1><router-outlet></router-outlet>\r\n";
 
 /***/ }),
 
