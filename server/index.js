@@ -1,9 +1,9 @@
 const express = require('express'),
     app = express(),
-    router = require('./router'),
+    routes = require('./routes'),
     config = require('../config');
 
-app.use('/', router);
+app.use('/', routes);
 
 app.use(function (req, res, next) {
     console.error("сработало 404");

@@ -6,10 +6,11 @@ import {Product} from "../../entities/product";
     templateUrl:'products.html'
 })
 export class ProductsPage{
-    products:Product[];
-    constructor(private provider: ProductProvider){
-        this.provider.getProducts().subscribe(products=>{
-            this.products = products;
-        })
+            products:Product[];
+            constructor(private provider: ProductProvider){
+                this.provider.selectAll().subscribe(products=>{
+                    this.products = products;
+                });
+
     }
 }
