@@ -26,6 +26,10 @@ export class ProductProvider
         return this.http.post("api/product/insert", product).map(res => {
             return res.json();})
     }
+    remove(product){
+        return this.http.post("api/product/remove", product).map(res=> {
+            return res.json();})
+    }
 
 }
 

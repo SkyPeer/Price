@@ -8,11 +8,11 @@ import {ProductProvider} from "../../providers/product";
 
 export class ProductAddPage {
     product: Product = {
-        description:'1',
-        price:0,
-        count:0
-    };
+        description: "0",
+        price: 500,
+        count: 1
 
+    };
     constructor(private productProvider: ProductProvider) {
 
     }

@@ -9,27 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { ProductProvider } from "../../providers/product";
-var ProductAddPage = (function () {
-    function ProductAddPage(productProvider) {
+var ProductRemovePage = (function () {
+    function ProductRemovePage(productProvider) {
         this.productProvider = productProvider;
         this.product = {
-            description: "0",
-            price: 500,
-            count: 1
+            description: "12312",
+            price: 0,
+            count: 0,
         };
     }
-    ProductAddPage.prototype.add = function (product) {
-        this.productProvider.insert(product).subscribe(function (response) {
+    ProductRemovePage.prototype.remove = function (product) {
+        this.productProvider.remove(product).subscribe(function (response) {
             console.log(response);
         });
     };
-    ProductAddPage = __decorate([
+    ProductRemovePage = __decorate([
         Component({
-            selector: 'product-add',
-            templateUrl: 'add.html'
+            selector: 'product-remove',
+            templateUrl: 'remove.html'
         }),
         __metadata("design:paramtypes", [ProductProvider])
-    ], ProductAddPage);
-    return ProductAddPage;
+    ], ProductRemovePage);
+    return ProductRemovePage;
 }());
-export { ProductAddPage };
+export { ProductRemovePage };

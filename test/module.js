@@ -15,10 +15,12 @@ import { ProductsPage } from "./pages/products/products";
 import { HttpModule } from "@angular/http";
 import { CountPage } from "./pages/products/count";
 import { ProductAddPage } from "./pages/products/add";
+import { ProductRemovePage } from "./pages/products/remove";
 var appRoutes = [
     { path: '', component: ProductsPage },
     { path: 'count', component: CountPage },
-    { path: 'add', component: ProductAddPage }
+    { path: 'add', component: ProductAddPage },
+    { path: 'remove', component: ProductRemovePage }
 ];
 var InitModule = (function () {
     function InitModule() {
@@ -29,7 +31,8 @@ var InitModule = (function () {
                 DefaultLayout,
                 ProductsPage,
                 CountPage,
-                ProductAddPage
+                ProductAddPage,
+                ProductRemovePage
             ],
             imports: [
                 BrowserModule,

@@ -1,0 +1,14 @@
+<h1>Remove Product</h1>
+<div>
+    <label for="input1">description</label>
+    <input type="text" name="input1" [(ngModel)]="product.description" >
+</div>
+<div>
+    <label for="input2">price</label>
+    <input type="text" name="input2" [(ngModel)]="product.price">
+</div>
+<div>
+    <label for="input3">count</label>
+    <input type="text" name="input3" [(ngModel)]="product.count">
+</div>
+<button class="btn" (click)="post(product)">отправить</button>
