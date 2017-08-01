@@ -8,9 +8,9 @@ import {ProductProvider} from "../../providers/product";
 
 export class ProductRemovePage {
     product: Product = {
-      description: "12312",
-        price: 0,
-        count: 0,
+      description: "1",
+        price: 1,
+        count: 1,
 
     };
     constructor(private productProvider: ProductProvider) {
@@ -24,3 +24,4 @@ export class ProductRemovePage {
 
 }
 
+// https://www.w3schools.com/nodejs/nodejs_mongodb_delete.asp

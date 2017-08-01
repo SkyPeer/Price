@@ -13,9 +13,9 @@ var ProductRemovePage = (function () {
     function ProductRemovePage(productProvider) {
         this.productProvider = productProvider;
         this.product = {
-            description: "12312",
-            price: 0,
-            count: 0,
+            description: "1",
+            price: 1,
+            count: 1,
         };
     }
     ProductRemovePage.prototype.remove = function (product) {

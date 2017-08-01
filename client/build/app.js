@@ -208,9 +208,9 @@ var ProductRemovePage = (function () {
     function ProductRemovePage(productProvider) {
         this.productProvider = productProvider;
         this.product = {
-            description: "12312",
-            price: 0,
-            count: 0,
+            description: "1",
+            price: 1,
+            count: 1,
         };
     }
     ProductRemovePage.prototype.remove = function (product) {
@@ -236,7 +236,7 @@ var ProductRemovePage = (function () {
 /***/ 110:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Remove Product</h1>\r\n<div>\r\n    <label for=\"input1\">description</label>\r\n    <input type=\"text\" name=\"input1\" [(ngModel)]=\"product.description\" >\r\n</div>\r\n<div>\r\n    <label for=\"input2\">price</label>\r\n    <input type=\"text\" name=\"input2\" [(ngModel)]=\"product.price\">\r\n</div>\r\n<div>\r\n    <label for=\"input3\">count</label>\r\n    <input type=\"text\" name=\"input3\" [(ngModel)]=\"product.count\">\r\n</div>\r\n<button class=\"btn\" (click)=\"post(product)\">отправить</button>";
+module.exports = "<h1>Remove Product</h1>\r\n<div>\r\n    <label for=\"input1\">description</label>\r\n    <input type=\"text\" name=\"input1\" [(ngModel)]=\"product.description\" >\r\n</div>\r\n<div>\r\n    <label for=\"input2\">price</label>\r\n    <input type=\"text\" name=\"input2\" [(ngModel)]=\"product.price\">\r\n</div>\r\n<div>\r\n    <label for=\"input3\">count</label>\r\n    <input type=\"text\" name=\"input3\" [(ngModel)]=\"product.count\">\r\n</div>\r\n<button class=\"btn\" (click)=\"remove(product)\">отправить</button>";
 
 /***/ }),
 
