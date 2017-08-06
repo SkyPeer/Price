@@ -13,12 +13,14 @@ import {HttpModule} from "@angular/http";
 import {CountPage} from "./pages/products/count";
 import {ProductAddPage} from "./pages/products/add";
 import {ProductRemovePage} from "./pages/products/remove"
+import {ProductEditPage} from "./pages/products/edit";
 
 const appRoutes: Routes = [
     { path: '', component: ProductsPage },
     { path: 'count', component: CountPage},
     { path: 'add', component: ProductAddPage},
-    { path: 'remove', component: ProductRemovePage}
+    { path: 'remove', component: ProductRemovePage},
+    { path: 'edit/:productId', component: ProductEditPage},
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
         ProductsPage,
         CountPage,
         ProductAddPage,
-        ProductRemovePage
+        ProductRemovePage,
+        ProductEditPage
     ],
     imports: [
         BrowserModule,

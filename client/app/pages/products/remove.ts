@@ -14,7 +14,6 @@ export class ProductRemovePage {
 
     };
     constructor(private productProvider: ProductProvider) {
-
     }
         remove(product){
             this.productProvider.remove(product).subscribe(response => {

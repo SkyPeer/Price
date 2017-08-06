@@ -29,11 +29,9 @@ module.exports = {
     count(query) {
         return models.Product.count(query)
     },
-    select(options) {
-        options = options || {};
-        let projection = options.projection || {},
-            query = options.query || {};
-        return models.Product.findOne(query, projection);
+    select(id) {
+
+        return models.Product.findOne(id);
     },
 
     selectById(id) {

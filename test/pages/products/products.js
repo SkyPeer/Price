@@ -9,20 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from "@angular/core";
 import { ProductProvider } from "../../providers/product";
+import { Router } from "@angular/router";
 var ProductsPage = (function () {
-    function ProductsPage(provider) {
-        var _this = this;
+    function ProductsPage(provider, router) {
         this.provider = provider;
+        this.router = router;
+        this.getProducts();
+    }
+    ProductsPage.prototype.getProducts = function () {
+        var _this = this;
         this.provider.selectAll().subscribe(function (products) {
             _this.products = products;
         });
-    }
+    };
+    ProductsPage.prototype.remove = function (id) {
+        var _this = this;
+        this.provider.remove(id).subscribe(function (done) {
+            console.log(done);
+            if (done.result == "ok") {
+                _this.getProducts();
+            }
+        });
+    };
+    ProductsPage.prototype.edit = function (id) {
+        this.router.navigate(['/edit', id]);
+    };
     ProductsPage = __decorate([
         Component({
             selector: 'products-page',
             templateUrl: 'products.html'
         }),
-        __metadata("design:paramtypes", [ProductProvider])
+        __metadata("design:paramtypes", [ProductProvider, Router])
     ], ProductsPage);
     return ProductsPage;
 }());

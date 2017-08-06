@@ -31,8 +31,18 @@ var ProductProvider = (function () {
             return res.json();
         });
     };
-    ProductProvider.prototype.remove = function (product) {
-        return this.http.post("api/product/remove", product).map(function (res) {
+    ProductProvider.prototype.remove = function (id) {
+        return this.http.post("api/product/remove", { id: id }).map(function (res) {
+            return res.json();
+        });
+    };
+    ProductProvider.prototype.update = function (product) {
+        return this.http.post("api/product/update", product).map(function (res) {
+            return res.json();
+        });
+    };
+    ProductProvider.prototype.select = function (id) {
+        return this.http.post("api/product/select", { id: id }).map(function (res) {
             return res.json();
         });
     };

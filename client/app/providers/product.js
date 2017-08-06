@@ -29,8 +29,8 @@ var ProductProvider = (function () {
             return res.json();
         });
     };
-    ProductProvider.prototype.remove = function (product) {
-        return this.http.post("api/product/delete", product).map(function (res) {
+    ProductProvider.prototype.remove = function (id) {
+        return this.http.post("api/product/remove", { id: id }).map(function (res) {
             return res.json();
         });
     };
