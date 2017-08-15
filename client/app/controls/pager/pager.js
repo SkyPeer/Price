@@ -7,26 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ProductEditPage = (function () {
-    function ProductEditPage(productProvider) {
-        this.productProvider = productProvider;
-        this.product = {
-            description: "0",
-            price: 500,
-            count: 1
-        };
+var PagerControl = (function () {
+    function PagerControl() {
     }
-    ProductEditPage.prototype.add = function (product) {
-        this.productProvider.insert(product).subscribe(function (response) {
-            console.log(response);
-        });
-    };
-    ProductEditPage = __decorate([
+    __decorate([
+        core_1.Input()
+    ], PagerControl.prototype, "count", void 0);
+    PagerControl = __decorate([
         core_1.Component({
-            selector: 'product-edit',
-            templateUrl: 'edit.html'
+            selector: 'pager',
+            templateUrl: 'pager.html'
         })
-    ], ProductEditPage);
-    return ProductEditPage;
+    ], PagerControl);
+    return PagerControl;
 }());
-exports.ProductEditPage = ProductEditPage;
+exports.PagerControl = PagerControl;

@@ -13,8 +13,8 @@ var ProductProvider = (function () {
     function ProductProvider(http) {
         this.http = http;
     }
-    ProductProvider.prototype.selectAll = function () {
-        return this.http.get("api/product/selectAll")
+    ProductProvider.prototype.selectAll = function (skip, limit) {
+        return this.http.get("api/product/selectAll", { params: { skip: skip, limit: limit } })
             .map(this.extractData);
     };
     ProductProvider.prototype.extractData = function (res) {

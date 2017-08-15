@@ -14,6 +14,7 @@ import {CountPage} from "./pages/products/count";
 import {ProductAddPage} from "./pages/products/add";
 import {ProductRemovePage} from "./pages/products/remove"
 import {ProductEditPage} from "./pages/products/edit";
+import {PagerControl} from "./controls/pager/pager";
 
 const appRoutes: Routes = [
     { path: '', component: ProductsPage },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
         CountPage,
         ProductAddPage,
         ProductRemovePage,
-        ProductEditPage
+        ProductEditPage,
+        PagerControl
     ],
     imports: [
         BrowserModule,

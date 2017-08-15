@@ -9,8 +9,8 @@ export class ProductProvider {
 
     }
 
-    selectAll(): Observable<Product[]> {
-        return this.http.get("api/product/selectAll")
+    selectAll(skip, limit): Observable<Product[]> {
+        return this.http.get("api/product/selectAll", {params:{skip, limit}})
             .map(this.extractData)
     }
 

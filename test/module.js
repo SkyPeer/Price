@@ -17,6 +17,7 @@ import { CountPage } from "./pages/products/count";
 import { ProductAddPage } from "./pages/products/add";
 import { ProductRemovePage } from "./pages/products/remove";
 import { ProductEditPage } from "./pages/products/edit";
+import { PagerControl } from "./controls/pager/pager";
 var appRoutes = [
     { path: '', component: ProductsPage },
     { path: 'count', component: CountPage },
@@ -35,7 +36,8 @@ var InitModule = (function () {
                 CountPage,
                 ProductAddPage,
                 ProductRemovePage,
-                ProductEditPage
+                ProductEditPage,
+                PagerControl
             ],
             imports: [
                 BrowserModule,

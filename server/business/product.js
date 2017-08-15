@@ -3,13 +3,13 @@ let models = require('../models');
 module.exports = {
     selectAll(options) {
         options = options || {};
+        //options = options ? options : {};
         let projection = options.projection || {},
             query = options.query || {},
             order = options.order || {description: 1},
             skip = options.skip || 0,
-            take = options.take === 0 ? options.take : options.take || 10;
-
-        return models.Product.find(query/*, projection*/)//.sort(order).skip(skip).limit(take);
+            limit = options.limit === 0 ? options.limit : options.limit || 3;
+        return models.Product.find(query/*, projection*/).skip(skip).limit(limit)//.sort(order).skip(skip).limit(take);
 
     },
     insert(newProduct, callback) {
@@ -35,6 +35,6 @@ module.exports = {
     },
 
     selectById(id) {
-        return  models.Product.findById(id);
+        return models.Product.findById(id);
     },
 };
