@@ -17,6 +17,7 @@ var CountPage = (function () {
         this.productProvider.count().subscribe(function (count) {
             this.countdb = count.count;
             that.countdb = count.count;
+            console.log(that.countdb);
         });
     }
     CountPage = __decorate([

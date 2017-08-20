@@ -8,14 +8,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input } from "@angular/core";
+import { ProductProvider } from "../../providers/product";
 var PagerControl = (function () {
-    function PagerControl() {
-        this.count = 4;
+    function PagerControl(productProvider) {
+        this.productProvider = productProvider;
         this.kol = 5;
+        var that = this;
+        this.productProvider.count().subscribe(function (Count) {
+            this.countdb = Count.count;
+            that.count = Count.count;
+            console.log("count1=", that.count);
+            return that.count;
+        });
     }
     PagerControl.prototype.pagerInit = function () {
         this.pages = [];
-        this.kol = Math.ceil(14 / 3);
+        console.log("count2=", this.count);
+        this.kol = Math.ceil(this.count / 3);
+        console.log("kol=", this.kol);
         for (var i = 1; i < this.kol; i++) {
             this.pages.push(i);
         }
@@ -28,7 +38,8 @@ var PagerControl = (function () {
         Component({
             selector: 'pager',
             templateUrl: 'pager.html'
-        })
+        }),
+        __metadata("design:paramtypes", [ProductProvider])
     ], PagerControl);
     return PagerControl;
 }());
