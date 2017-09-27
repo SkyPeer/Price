@@ -13,11 +13,11 @@ export class PagerControl{
     @Input()
     count: number;
     pages: number [];
-    kol: number = 5;
+    kol: number;
 
     constructor(private productProvider: ProductProvider) {
         let that = this;
-        this.productProvider.count().subscribe(function (Count) {
+        this.productProvider.getCount().subscribe(function (Count) {
             this.countdb = Count.count;
             that.count = Count.count;
             console.log("count1=",that.count);
@@ -27,10 +27,10 @@ export class PagerControl{
     }
 
 
-    pagerInit(){
+    pagerInit(count){
         this.pages = [];
-        console.log("count2=",this.count);
-        this.kol = Math.ceil(this.count / 3);
+       console.log("count2=",count);
+        this.kol = Math.ceil(count / 3);
         console.log("kol=",this.kol);
         for (let i = 1; i < this.kol;  i++){
             this.pages.push(i);

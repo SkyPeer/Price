@@ -12,19 +12,18 @@ import { ProductProvider } from "../../providers/product";
 var PagerControl = (function () {
     function PagerControl(productProvider) {
         this.productProvider = productProvider;
-        this.kol = 5;
         var that = this;
-        this.productProvider.count().subscribe(function (Count) {
+        this.productProvider.getCount().subscribe(function (Count) {
             this.countdb = Count.count;
             that.count = Count.count;
             console.log("count1=", that.count);
             return that.count;
         });
     }
-    PagerControl.prototype.pagerInit = function () {
+    PagerControl.prototype.pagerInit = function (count) {
         this.pages = [];
-        console.log("count2=", this.count);
-        this.kol = Math.ceil(this.count / 3);
+        console.log("count2=", count);
+        this.kol = Math.ceil(count / 3);
         console.log("kol=", this.kol);
         for (var i = 1; i < this.kol; i++) {
             this.pages.push(i);

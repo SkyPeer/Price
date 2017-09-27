@@ -21,7 +21,7 @@ var ProductProvider = (function () {
         var body = res.json();
         return body || {};
     };
-    ProductProvider.prototype.count = function () {
+    ProductProvider.prototype.getCount = function () {
         return this.http.get("api/product/count").map(function (res) {
             return res.json();
         });

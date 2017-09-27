@@ -14,7 +14,7 @@ var CountPage = (function () {
         this.productProvider = productProvider;
         this.countdb = 0;
         var that = this;
-        this.productProvider.count().subscribe(function (count) {
+        this.productProvider.getCount().subscribe(function (count) {
             this.countdb = count.count;
             that.countdb = count.count;
             console.log(that.countdb);

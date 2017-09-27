@@ -12,15 +12,14 @@ export class ProductsPage {
     count: number;
 
     @ViewChild(PagerControl)
-    pagerControl;
+    pagerControl1;
 
     getProducts() {
         this.provider.selectAll(3, 3).subscribe(products => {
             this.products = products;
         });
-        this.provider.count().subscribe(count => {
-            this.count = count.count;
-            this.pagerControl.pagerInit();
+        this.provider.getCount().subscribe(response => {
+            this.pagerControl1.pagerInit(response.count);
         })
     }
 

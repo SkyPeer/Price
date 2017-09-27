@@ -22,9 +22,8 @@ var ProductsPage = (function () {
         this.provider.selectAll(3, 3).subscribe(function (products) {
             _this.products = products;
         });
-        this.provider.count().subscribe(function (count) {
-            _this.count = count.count;
-            _this.pagerControl.pagerInit();
+        this.provider.getCount().subscribe(function (response) {
+            _this.pagerControl1.pagerInit(response.count);
         });
     };
     ProductsPage.prototype.remove = function (id) {
@@ -42,7 +41,7 @@ var ProductsPage = (function () {
     __decorate([
         ViewChild(PagerControl),
         __metadata("design:type", Object)
-    ], ProductsPage.prototype, "pagerControl", void 0);
+    ], ProductsPage.prototype, "pagerControl1", void 0);
     ProductsPage = __decorate([
         Component({
             selector: 'products-page',

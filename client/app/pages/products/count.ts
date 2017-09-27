@@ -9,7 +9,7 @@ export class CountPage {
     constructor(private productProvider: ProductProvider) {
 
         let that = this;
-        this.productProvider.count().subscribe(function (count) {
+        this.productProvider.getCount().subscribe(function (count) {
             this.countdb = count.count;
             that.countdb = count.count;
             console.log(that.countdb);

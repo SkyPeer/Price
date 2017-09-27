@@ -19,9 +19,9 @@ export class ProductProvider {
         return body as Product[] || {};
     }
 
-    count() {
+    getCount() {
         return this.http.get("api/product/count").map(res => {
-            return res.json();
+                return res.json();
         })
     }
 

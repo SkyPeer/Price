@@ -67,9 +67,8 @@ var ProductsPage = (function () {
         this.provider.selectAll(3, 3).subscribe(function (products) {
             _this.products = products;
         });
-        this.provider.count().subscribe(function (count) {
-            _this.count = count.count;
-            _this.pagerControl.pagerInit();
+        this.provider.getCount().subscribe(function (response) {
+            _this.pagerControl1.pagerInit(response.count);
         });
     };
     ProductsPage.prototype.remove = function (id) {
@@ -87,7 +86,7 @@ var ProductsPage = (function () {
     __decorate([
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */](__WEBPACK_IMPORTED_MODULE_3__controls_pager_pager__["a" /* PagerControl */]),
         __metadata("design:type", Object)
-    ], ProductsPage.prototype, "pagerControl", void 0);
+    ], ProductsPage.prototype, "pagerControl1", void 0);
     ProductsPage = __decorate([
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */]({
             selector: 'products-page',
@@ -140,7 +139,7 @@ var CountPage = (function () {
         this.productProvider = productProvider;
         this.countdb = 0;
         var that = this;
-        this.productProvider.count().subscribe(function (count) {
+        this.productProvider.getCount().subscribe(function (count) {
             this.countdb = count.count;
             that.countdb = count.count;
             console.log(that.countdb);
@@ -383,7 +382,7 @@ var ProductProvider = (function () {
         var body = res.json();
         return body || {};
     };
-    ProductProvider.prototype.count = function () {
+    ProductProvider.prototype.getCount = function () {
         return this.http.get("api/product/count").map(function (res) {
             return res.json();
         });
@@ -441,19 +440,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PagerControl = (function () {
     function PagerControl(productProvider) {
         this.productProvider = productProvider;
-        this.kol = 5;
         var that = this;
-        this.productProvider.count().subscribe(function (Count) {
+        this.productProvider.getCount().subscribe(function (Count) {
             this.countdb = Count.count;
             that.count = Count.count;
             console.log("count1=", that.count);
             return that.count;
         });
     }
-    PagerControl.prototype.pagerInit = function () {
+    PagerControl.prototype.pagerInit = function (count) {
         this.pages = [];
-        console.log("count2=", this.count);
-        this.kol = Math.ceil(this.count / 3);
+        console.log("count2=", count);
+        this.kol = Math.ceil(count / 3);
         console.log("kol=", this.kol);
         for (var i = 1; i < this.kol; i++) {
             this.pages.push(i);
