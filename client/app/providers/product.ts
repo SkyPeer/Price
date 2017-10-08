@@ -5,6 +5,7 @@ import {Observable} from "rxjs/Observable";
 import {observable} from "rxjs/symbol/observable";
 @Injectable()
 export class ProductProvider {
+
     constructor(private http: Http) {
 
     }

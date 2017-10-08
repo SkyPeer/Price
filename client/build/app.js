@@ -419,6 +419,55 @@ var ProductProvider = (function () {
 
 /***/ }),
 
+/***/ 382:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_product__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ClientsPage = (function () {
+    function ClientsPage(productProvider) {
+        this.productProvider = productProvider;
+    }
+    ClientsPage.prototype.ngOnInit = function () {
+        var _this = this;
+        var products$ = this.productProvider.selectAll(0, 0);
+        products$.subscribe(function (products) { _this.products = products; });
+    };
+    ClientsPage = __decorate([
+        __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */]({
+            selector: 'clients',
+            template: __webpack_require__(383),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__providers_product__["a" /* ProductProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_product__["a" /* ProductProvider */]) === "function" && _a || Object])
+    ], ClientsPage);
+    return ClientsPage;
+    var _a;
+}());
+
+
+
+/***/ }),
+
+/***/ 383:
+/***/ (function(module, exports) {
+
+module.exports = "<div>Clients</div>";
+
+/***/ }),
+
 /***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -512,6 +561,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformB
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_products_remove__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_products_edit__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__controls_pager_pager__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_products_client__ = __webpack_require__(382);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -532,12 +582,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__pages_products_products__["a" /* ProductsPage */] },
-    { path: 'count', component: __WEBPACK_IMPORTED_MODULE_9__pages_products_count__["a" /* CountPage */] },
-    { path: 'add', component: __WEBPACK_IMPORTED_MODULE_10__pages_products_add__["a" /* ProductAddPage */] },
-    { path: 'remove', component: __WEBPACK_IMPORTED_MODULE_11__pages_products_remove__["a" /* ProductRemovePage */] },
-    { path: 'edit/:productId', component: __WEBPACK_IMPORTED_MODULE_12__pages_products_edit__["a" /* ProductEditPage */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_14__pages_products_client__["a" /* ClientsPage */] },
+    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_7__pages_products_products__["a" /* ProductsPage */] },
+    { path: 'admin/count', component: __WEBPACK_IMPORTED_MODULE_9__pages_products_count__["a" /* CountPage */] },
+    { path: 'admin/add', component: __WEBPACK_IMPORTED_MODULE_10__pages_products_add__["a" /* ProductAddPage */] },
+    { path: 'admin/remove', component: __WEBPACK_IMPORTED_MODULE_11__pages_products_remove__["a" /* ProductRemovePage */] },
+    { path: 'admin/edit/:productId', component: __WEBPACK_IMPORTED_MODULE_12__pages_products_edit__["a" /* ProductEditPage */] },
 ];
 var InitModule = (function () {
     function InitModule() {
@@ -551,7 +603,8 @@ var InitModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__pages_products_add__["a" /* ProductAddPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_products_remove__["a" /* ProductRemovePage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_products_edit__["a" /* ProductEditPage */],
-                __WEBPACK_IMPORTED_MODULE_13__controls_pager_pager__["a" /* PagerControl */]
+                __WEBPACK_IMPORTED_MODULE_13__controls_pager_pager__["a" /* PagerControl */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_products_client__["a" /* ClientsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],

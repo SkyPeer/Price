@@ -18,12 +18,14 @@ import { ProductAddPage } from "./pages/products/add";
 import { ProductRemovePage } from "./pages/products/remove";
 import { ProductEditPage } from "./pages/products/edit";
 import { PagerControl } from "./controls/pager/pager";
+import { ClientsPage } from "./pages/products/client";
 var appRoutes = [
-    { path: '', component: ProductsPage },
-    { path: 'count', component: CountPage },
-    { path: 'add', component: ProductAddPage },
-    { path: 'remove', component: ProductRemovePage },
-    { path: 'edit/:productId', component: ProductEditPage },
+    { path: '', component: ClientsPage },
+    { path: 'admin', component: ProductsPage },
+    { path: 'admin/count', component: CountPage },
+    { path: 'admin/add', component: ProductAddPage },
+    { path: 'admin/remove', component: ProductRemovePage },
+    { path: 'admin/edit/:productId', component: ProductEditPage },
 ];
 var InitModule = (function () {
     function InitModule() {
@@ -37,7 +39,8 @@ var InitModule = (function () {
                 ProductAddPage,
                 ProductRemovePage,
                 ProductEditPage,
-                PagerControl
+                PagerControl,
+                ClientsPage
             ],
             imports: [
                 BrowserModule,
