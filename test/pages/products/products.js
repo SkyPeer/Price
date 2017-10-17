@@ -36,7 +36,7 @@ var ProductsPage = (function () {
         });
     };
     ProductsPage.prototype.edit = function (id) {
-        this.router.navigate(['/edit', id]);
+        this.router.navigate(['admin/edit', id]);
     };
     __decorate([
         ViewChild(PagerControl),

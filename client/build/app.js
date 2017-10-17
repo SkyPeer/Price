@@ -81,7 +81,7 @@ var ProductsPage = (function () {
         });
     };
     ProductsPage.prototype.edit = function (id) {
-        this.router.navigate(['/edit', id]);
+        this.router.navigate(['admin/edit', id]);
     };
     __decorate([
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* ViewChild */](__WEBPACK_IMPORTED_MODULE_3__controls_pager_pager__["a" /* PagerControl */]),
