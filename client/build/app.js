@@ -397,7 +397,7 @@ var ClientsPage = (function () {
 /***/ 117:
 /***/ (function(module, exports) {
 
-module.exports = "<div>Clients</div>\r\n<table>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n        <th></th>\r\n        <th></th>\r\n    </tr>\r\n    <tr *ngFor=\"let product of products\">\r\n        <td>{{product.description}}</td>\r\n        <td>{{product.price}}</td>\r\n        <td>{{product.count}}</td>\r\n\r\n    </tr>\r\n</table>";
+module.exports = "<div>Clients</div>\r\n<table class=\"steelBlueCols\">\r\n    <thead>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n<tr *ngFor=\"let product of products\">\r\n    <td>{{product.description}}</td>\r\n    <td>{{product.price}}</td>\r\n    <td>{{product.count}}</td>\r\n</tr>\r\n</tbody>\r\n</table>";
 
 /***/ }),
 
@@ -656,7 +656,7 @@ var DefaultLayout = (function () {
 /***/ 98:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Price App</h1>\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНКА</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ</a> | <a routerLink=\"admin/remove\">REMOVE</a>\r\n\r\n<router-outlet></router-outlet>\r\n<br />\r\n\r\n<footer>днище</footer>\r\n\r\n";
+module.exports = "<h1>OPTIMA | СКЛАД</h1>\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНКА</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ</a> | <a routerLink=\"admin/remove\">REMOVE</a>\r\n\r\n<router-outlet></router-outlet>\r\n<br />\r\n\r\n<footer>днище</footer>\r\n\r\n";
 
 /***/ }),
 

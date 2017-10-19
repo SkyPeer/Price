@@ -1,16 +1,18 @@
 <div>Clients</div>
-<table>
+<table class="steelBlueCols">
+    <thead>
     <tr>
         <th>Описание:</th>
         <th>Цена:</th>
         <th>Кол:</th>
-        <th></th>
-        <th></th>
     </tr>
-    <tr *ngFor="let product of products">
-        <td>{{product.description}}</td>
-        <td>{{product.price}}</td>
-        <td>{{product.count}}</td>
+    </thead>
 
-    </tr>
+    <tbody>
+<tr *ngFor="let product of products">
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.count}}</td>
+</tr>
+</tbody>
 </table>
