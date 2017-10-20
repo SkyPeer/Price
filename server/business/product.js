@@ -8,7 +8,7 @@ module.exports = {
             query = options.query || {},
             order = options.order || {description: 1},
             skip = options.skip || 0,
-            limit = options.limit === 0 ? options.limit : options.limit || 3;
+            limit = options.limit === 0 ? options.limit : options.limit || 0;
         return models.Product.find(query/*, projection*/).skip(skip).limit(limit)//.sort(order).skip(skip).limit(take);
 
     },

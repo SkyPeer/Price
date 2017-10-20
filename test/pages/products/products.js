@@ -19,7 +19,7 @@ var ProductsPage = (function () {
     }
     ProductsPage.prototype.getProducts = function () {
         var _this = this;
-        this.provider.selectAll(3, 3).subscribe(function (products) {
+        this.provider.selectAll(1, 1).subscribe(function (products) {
             _this.products = products;
         });
         this.provider.getCount().subscribe(function (response) {

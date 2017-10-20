@@ -64,7 +64,7 @@ var ProductsPage = (function () {
     }
     ProductsPage.prototype.getProducts = function () {
         var _this = this;
-        this.provider.selectAll(3, 3).subscribe(function (products) {
+        this.provider.selectAll(1, 1).subscribe(function (products) {
             _this.products = products;
         });
         this.provider.getCount().subscribe(function (response) {
@@ -376,7 +376,7 @@ var ClientsPage = (function () {
     }
     ClientsPage.prototype.ngOnInit = function () {
         var _this = this;
-        var products$ = this.productProvider.selectAll(0, 0);
+        var products$ = this.productProvider.selectAll(1, 1);
         products$.subscribe(function (products) { _this.products = products; });
     };
     ClientsPage = __decorate([
@@ -397,7 +397,7 @@ var ClientsPage = (function () {
 /***/ 117:
 /***/ (function(module, exports) {
 
-module.exports = "<div>Clients</div>\r\n<table class=\"steelBlueCols\">\r\n    <thead>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n<tr *ngFor=\"let product of products\">\r\n    <td>{{product.description}}</td>\r\n    <td>{{product.price}}</td>\r\n    <td>{{product.count}}</td>\r\n</tr>\r\n</tbody>\r\n</table>";
+module.exports = "<table class=\"steelBlueCols\">\r\n    <thead>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n<tr *ngFor=\"let product of products\">\r\n    <td>{{product.description}}</td>\r\n    <td>{{product.price}}</td>\r\n    <td>{{product.count}}</td>\r\n</tr>\r\n</tbody>\r\n</table>";
 
 /***/ }),
 
@@ -656,7 +656,7 @@ var DefaultLayout = (function () {
 /***/ 98:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>OPTIMA | СКЛАД</h1>\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНКА</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ</a> | <a routerLink=\"admin/remove\">REMOVE</a>\r\n\r\n<router-outlet></router-outlet>\r\n<br />\r\n\r\n<footer>днище</footer>\r\n\r\n";
+module.exports = "<h1>OPTIMA | СКЛАД</h1>\r\n<br />\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНКА</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ</a> | <a routerLink=\"admin/remove\">REMOVE</a>\r\n<br />\r\n<router-outlet></router-outlet>\r\n<br />\r\n<br />\r\n<footer>Oleg.Selivantsev@optima.ru</footer>\r\n\r\n";
 
 /***/ }),
 

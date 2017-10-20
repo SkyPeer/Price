@@ -15,7 +15,7 @@ var ClientsPage = (function () {
     }
     ClientsPage.prototype.ngOnInit = function () {
         var _this = this;
-        var products$ = this.productProvider.selectAll(0, 0);
+        var products$ = this.productProvider.selectAll(1, 1);
         products$.subscribe(function (products) { _this.products = products; });
     };
     ClientsPage = __decorate([

@@ -15,7 +15,7 @@ export class ProductsPage {
     pagerControl1;
 
     getProducts() {
-        this.provider.selectAll(3, 3).subscribe(products => {
+        this.provider.selectAll(1, 1).subscribe(products => {
             this.products = products;
         });
         this.provider.getCount().subscribe(response => {

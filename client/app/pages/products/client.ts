@@ -12,7 +12,7 @@ export class ClientsPage {
 
     }
     ngOnInit(){
-        let products$ = this.productProvider.selectAll(0,0);
+        let products$ = this.productProvider.selectAll(1,1);
         products$.subscribe( (products)=>{this.products = products } )
     }
     products;
