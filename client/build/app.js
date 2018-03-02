@@ -112,7 +112,7 @@ module.exports = "<ul>\r\n    <li *ngFor=\"let page of pages\">{{page}}</li>\r\n
 /***/ 106:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <h1>Админка</h1>\r\n<table>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n        <th></th>\r\n        <th></th>\r\n    </tr>\r\n    <tr *ngFor=\"let product of products\">\r\n        <td>{{product.description}}</td>\r\n        <td>{{product.price}}</td>\r\n        <td>{{product.count}}</td>\r\n        <td><button (click)=\"remove(product._id)\">X</button></td>\r\n        <td><button (click)=\"edit(product._id)\">EDIT</button></td>\r\n\r\n    </tr>\r\n</table>\r\n<pager [count]=count></pager>\r\n</div>";
+module.exports = "<div>\r\n    <h1>Админка</h1>\r\n<table>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Количество:</th>\r\n        <th></th>\r\n        <th></th>\r\n    </tr>\r\n    <tr *ngFor=\"let product of products\">\r\n        <td>{{product.description}}</td>\r\n        <td>{{product.price}}</td>\r\n        <td>{{product.count}}</td>\r\n        <td><button (click)=\"remove(product._id)\">X</button></td>\r\n        <td><button (click)=\"edit(product._id)\">EDIT</button></td>\r\n\r\n    </tr>\r\n</table>\r\n<pager [count]=count></pager>\r\n</div>";
 
 /***/ }),
 
@@ -397,7 +397,7 @@ var ClientsPage = (function () {
 /***/ 117:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"steelBlueCols\">\r\n    <thead>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Кол:</th>\r\n    </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n<tr *ngFor=\"let product of products\">\r\n    <td>{{product.description}}</td>\r\n    <td>{{product.price}}</td>\r\n    <td>{{product.count}}</td>\r\n</tr>\r\n</tbody>\r\n</table>";
+module.exports = "<table class=\"steelBlueCols\">\r\n    <thead>\r\n    <tr>\r\n        <th>Описание:</th>\r\n        <th>Цена:</th>\r\n        <th>Количество:</th>\r\n    </tr>\r\n    </thead>\r\n\r\n    <tbody>\r\n<tr *ngFor=\"let product of products\">\r\n    <td>{{product.description}}</td>\r\n    <td>{{product.price}}</td>\r\n    <td>{{product.count}}</td>\r\n</tr>\r\n</tbody>\r\n</table>";
 
 /***/ }),
 
@@ -656,7 +656,7 @@ var DefaultLayout = (function () {
 /***/ 98:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>OPTIMA | СКЛАД</h1>\r\n<br />\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНКА</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ</a> | <a routerLink=\"admin/remove\">REMOVE</a>\r\n<br />\r\n<router-outlet></router-outlet>\r\n<br />\r\n<br />\r\n<footer>Oleg.Selivantsev@optima.ru</footer>\r\n\r\n";
+module.exports = "<h1>OPTIMA | СКЛАД</h1>\r\n<br />\r\n| <a routerLink=\"/\">ГЛАВНАЯ</a> | <a routerLink=\"/admin\">АДМИНИСТРИРОВАНИЕ</a> | <a routerLink=\"admin/count\">КОЛ.СТРОК</a> | <a routerLink=\"admin/add\">ДОБАВИТЬ ПОЗИЦИЮ</a> | <a routerLink=\"admin/remove\">УДАЛИТЬ ПОЗИЦИЮ</a>\r\n<br />\r\n<router-outlet></router-outlet>\r\n<br />\r\n<br />\r\n<footer>Вопросы и замечания просьба направлять: <a href=\"mailto:oleg.selivantsev@optima.ru?subject=#B2B Questions\">Oleg.Selivantsev@optima.ru</a></footer>";
 
 /***/ }),
 
