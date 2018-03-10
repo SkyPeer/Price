@@ -18,7 +18,7 @@ appl.post('/hernya', function (req, res) {
 });
 
 appl.get('/test', function (request, response, next) {
-    let htmltext = " ok ";
+    let htmltext = "ok ";
     response.send(htmltext);
 });
 
