@@ -27,7 +27,7 @@ appl.get('*', function (req, res) {
 });
 
 
-servak.listen(3020, function () {
+servak.listen(3010, function () {
     console.log("servak started");
 });
 
